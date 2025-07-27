@@ -20,8 +20,38 @@ spring:
     show-sql: true
   config:
     import: "optional:configserver:http://localhost:8071/"
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    shutdown:
+      access: "unrestricted"
+  info:
+    env:
+      enabled: true
+
+# Removed invalid 'endpoints' section as it is not recognized by Spring Boot
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
+info:
+  app:
+    name: "Accounts Service"
+    description: "Service for managing user accounts"
+    version: 1.0.0
+    title: "Accounts Service API"
+    termsOfService: "https://eazybank.com/terms"
+    contact:
+      name: "EazyBank Support"
+      url: "https://eazybank.com/support"
+      email: "support@eazybank.com"
