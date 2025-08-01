@@ -1,0 +1,38 @@
+# application.yml for Gateway Service
+spring:
+  application:
+    name: "gatewayserver"
+  config:
+    import: "optional:configserver:http://localhost:8071/" 
+  cloud:
+    gateway:
+     discovery:
+        locator:
+          enabled: true
+          lowercaseserviceid: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      access: "unrestricted"
+  info:
+    env:
+      enabled: true
+
+# Removed invalid 'endpoints' section as it is not recognized by Spring Boot
+
+info:
+  app:
+    name: "GateWay Service"
+    description: "Service for routing and API gateway functionality"
+    version: 1.0.0
+    title: "GateWay Service API"
+    termsOfService: "https://eazybank.com/terms"
+    contact:
+      name: "EazyBank Support"
+      url: "https://eazybank.com/support"
+      email: "support@eazybank.com"

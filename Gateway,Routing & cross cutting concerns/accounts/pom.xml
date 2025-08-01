@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eazybytes</groupId>
-	<artifactId>loans</artifactId>
+	<artifactId>accounts</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>loans</name>
-	<description>Microservice for Loans</description>
+	<name>accounts</name>
+	<description>Microservice for Accounts</description>
     <url/>
     <licenses>
         <license/>
@@ -49,13 +49,17 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    	</dependency>
+		<dependency>
+      		<groupId>org.springframework.cloud</groupId>
+      		<artifactId>spring-cloud-starter-openfeign</artifactId>
+    	</dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		<dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-   		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -117,7 +121,7 @@
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>actuallynirajgupta/${project.artifactId}:s8</image>
+						<image>actuallynirajgupta/${project.artifactId}:s9</image>
 					</to>
 				</configuration>
 			</plugin>
