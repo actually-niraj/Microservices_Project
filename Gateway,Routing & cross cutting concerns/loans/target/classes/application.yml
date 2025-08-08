@@ -55,3 +55,10 @@ info:
       name: "EazyBank Support"
       url: "https://eazybank.com/support"
       email: "support@eazybank.com"
+
+logging:
+  level:
+    com:
+      eazybytes:
+        loans: DEBUG
+

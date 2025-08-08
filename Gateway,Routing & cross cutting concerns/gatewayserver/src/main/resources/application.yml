@@ -5,11 +5,13 @@ spring:
   config:
     import: "optional:configserver:http://localhost:8071/" 
   cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: false
-          lower-case-service-id: true
+     gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
 
 management:
   endpoints:
@@ -39,3 +41,11 @@ info:
       name: "EazyBank Support"
       url: "https://eazybank.com/support"
       email: "support@eazybank.com"
+
+
+logging:
+  level:
+    com:
+      eazybytes:
+        gatewayserver: DEBUG
+
