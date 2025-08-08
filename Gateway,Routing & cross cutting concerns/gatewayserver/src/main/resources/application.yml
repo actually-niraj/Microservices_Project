@@ -16,7 +16,7 @@ management:
     web:
       exposure:
         include: "*"
-  endpoint:
+  endpoint:          # singular "endpoint", not "endpoints"
     gateway:
       access: "unrestricted"
   info:
