@@ -6,10 +6,10 @@ spring:
     import: "optional:configserver:http://localhost:8071/" 
   cloud:
     gateway:
-     discovery:
+      discovery:
         locator:
-          enabled: true
-          lowercaseserviceid: true
+          access: "unrestricted"
+          lower-case-service-id: true
 
 management:
   endpoints:
@@ -19,6 +19,8 @@ management:
   endpoint:          # singular "endpoint", not "endpoints"
     gateway:
       access: "unrestricted"
+
+
   info:
     env:
       enabled: true
