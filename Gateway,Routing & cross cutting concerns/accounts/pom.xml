@@ -113,6 +113,14 @@
 							<version>${lombok.version}</version>
 						</path>
 					</annotationProcessorPaths>
+					<platforms>
+						<platform>
+						<architecture>arm64</architecture>
+						<os>linux</os>
+						</platform>
+					</platforms>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 			<plugin>

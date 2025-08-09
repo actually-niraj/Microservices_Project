@@ -104,6 +104,12 @@
                             <version>${lombok.version}</version>
                         </path>
                     </annotationProcessorPaths>
+					<platforms>
+						<platform>
+						<architecture>arm64</architecture>
+						<os>linux</os>
+						</platform>
+					</platforms>
                 </configuration>
             </plugin>
 			<plugin>

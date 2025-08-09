@@ -25,10 +25,18 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "*"      
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
   endpoint:
     shutdown:
       access: "unrestricted"
+    health:
+      probes:
+        enabled: true
   info:
     env:
       enabled: true
