@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.eazybytes.accounts.dto.LoansDto;
 
 
-@FeignClient("loans") // Assuming the service name is 'loans'
+@FeignClient(name = "loans",fallback = LoansFallback.class) // Assuming the service name is 'loans'
 public interface LoansFeignClient {
 
     @GetMapping(value = "api/fetch", consumes = "application/json")
