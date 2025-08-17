@@ -80,7 +80,7 @@
 						</platform>
 					</platforms>
 					<to>
-						<image>actuallynirajgupta/${project.artifactId}:s9</image>
+						<image>actuallynirajgupta/${project.artifactId}:s10</image>
 					</to>
 				</configuration>
 			</plugin>
