@@ -134,7 +134,7 @@
 						</platform>
 					</platforms>
 					<to>
-						<image>actuallynirajgupta/${project.artifactId}:s12</image>
+						<image>actuallynirajgupta/${project.artifactId}:s14</image>
 					</to>
 				</configuration>
 			</plugin>
