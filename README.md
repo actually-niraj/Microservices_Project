@@ -98,4 +98,38 @@ This project demonstrates real-world enterprise patterns like **Service Discover
 ---
 
 ## 📁 High-Level Architecture
+             ┌───────────────────────────┐
+             │         Client UI          │
+             │   (Web / Mobile / REST)    │
+             └─────────────┬─────────────┘
+                           │
+                           v
+             ┌───────────────────────────┐
+             │        API Gateway         │
+             │  (Spring Cloud Gateway)    │
+             └─────────────┬─────────────┘
+                           │
+    ┌──────────────────────┼─────────────────────────┐
+    │                      │                         │
+    v                      v                         v
+┌─────────────────┐ ┌────────────────────┐ ┌──────────────────┐
+│ Security Layer │ │ Service Discovery │ │ Config Server │
+│ (JWT + RBAC) │ │ (Eureka) │ │ Centralized Config│
+└─────────────────┘ └────────────────────┘ └──────────────────┘
+│
+v
+┌───────────────────────────┐
+│ Microservices │
+│ (Spring Boot Services) │
+└─────────────┬─────────────┘
+│
+┌──────────────────────┼─────────────────────────┐
+│ │ │
+v v v
+┌─────────────────┐ ┌────────────────────┐ ┌──────────────────┐
+│ Messaging Layer │ │ Resilience & Fault │ │ Observability │
+│ Kafka/RabbitMQ │ │ Tolerance (Res4j) │ │ Grafana/Prometheus│
+└─────────────────┘ └────────────────────┘ └──────────────────┘
+
+
 
